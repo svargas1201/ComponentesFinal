@@ -10,9 +10,9 @@
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
-
     <link href="/ComponentesFinal/assets/css/bootstrap.css" rel="stylesheet" />
     <link href="/ComponentesFinal/assets/css/gaia.css" rel="stylesheet"/>
+
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Cambo|Poppins:400,600" rel="stylesheet" type="text/css"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet"/>
@@ -21,13 +21,22 @@
     <!--     My shit     -->
     <link href="/ComponentesFinal/assets/css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous"/>
-    
     <style>
         .icon{
             cursor: pointer;
         }
         a{
             opacity: unset;
+        }
+        .alignCenter{
+            text-align: center;
+        }
+        td{
+            vertical-align: middle !important;
+        }
+        .btnAdd{
+            float:right;
+            margin: 10px;
         }
     </style>
 </h:head>
@@ -67,77 +76,25 @@
         <div class="container">
             <div class="row">
                 <div class="title-area-latina">
-                    <h2>Recent locations added</h2>
+                    <h2>List of users</h2>
                     <div class="separator separator-danger">✻</div>
                 </div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for..."/>
-                    <span class="input-group-btn">
-                        <button class="btn btn-danger btn-fill" type="button">Go!</button>
-                    </span>
-                </div>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="info-icon">
-                            <a href="place.html?place=lakelouise">
-                                <div class="icon text-danger item">    
-                                    <img src="https://handluggageonly.co.uk/wp-content/uploads/2017/05/Lake-Louise.jpg"/>
-                                </div>
-                                <h3>Lake Louise</h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info-icon">
-                            <a href="place.html?place=icefieldsparkway">
-                                <div class="icon text-danger item">
-                                    <img src="https://www.lonelyplanet.com/travel-blog/tip-article/wordpress_uploads/2013/03/GettyImages-478080583_full_cs.jpg"/>
-                                </div>
-                                <h3>Icefields Parkway</h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info-icon">
-                            <a href="place.html?place=albertatown">
-                                <div class="icon text-danger item">
-                                    <img src="https://pinoy-canada.com/wp-content/uploads/2016/09/Banff-Alberta-Canada-11-1024x683.jpg"/>
-                                </div>
-                                <h3>Alberta Town</h3>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="info-icon">
-                            <a href="place.html?place=telusworld">
-                                <div class="icon text-danger item">
-                                    <img src="https://www.bcmag.ca/wp-content/uploads/2017/04/62328_max.jpg"/>
-                                </div>
-                                <h3>Telus World of Science</h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info-icon">
-                            <a href="place.html?place=squamishbridge">
-                                <div class="icon text-danger item">
-                                    <img src="http://vacay.ca/wp-content/uploads/2015/12/squamish-suspension-bridge-sea-to-sky.jpg"/>
-                                </div>
-                                <h3>Squamish suspension bridge</h3>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="info-icon">
-                            <a href="place.html?place=cathedralmontereal">
-                                <div class="icon text-danger item">
-                                    <img src="https://i.pinimg.com/originals/37/09/96/370996469759416db7db253f3a07d623.jpg"/>
-                                </div>
-                                <h3>Cathedral of Montreal</h3>
-                            </a>
-                        </div>
+                    <div class="col-md-12">
+                            <table class="table table-hover" style="font-size: 16px;">
+                                <head>
+                                    <th class="alignCenter">#</th>
+                                    <th>Nombre</th>
+                                    <th>Apellido</th>
+                                    <th class="alignCenter">Email</th>
+                                </head>
+                                <tr>
+                                    <td class="alignCenter">1</td>
+                                    <td>Sebastian</td>
+                                    <td>Vargas Rojas</td>
+                                    <td class="alignCenter">svr@gmail.com</td>
+                                </tr>
+                            </table>
                     </div>
                 </div>
             </div>
@@ -149,7 +106,7 @@
             <div class="col-md-12">
                 <div clas="copyright">
                     <span style="float:left;padding-bottom:25px">
-                        ©2019  - Daniel's
+                        © 2019  - Daniel's
                     </span>
                     <span style="float:right;padding-bottom:25px">
                         Universidad Latina de Costa Rica
@@ -166,19 +123,84 @@
 <!--  js library for devices recognition -->
 <script type="text/javascript" src="/ComponentesFinal/assets/js/modernizr.js"></script>
 
-<!--  script for google maps   -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
 <!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
 <script type="text/javascript" src="/ComponentesFinal/assets/js/gaia.js"></script>
 
-<script> 
-    $(function(){
-        $("#includeHeader").load("header.html"); 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
     });
-    $(function(){
-        $("#includeFooter").load("footer.html"); 
-    });
-</script> 
+    
+    function addPlace(){
+        if(validateValues('add')){
+            Swal.fire({
+                title: 'Success!',
+                text: 'The new place was successfully added.',
+                type: 'success',
+                confirmButtonText: 'Ok'
+            });
+        }
+    }
+
+    function editPlace(){
+        if(validateValues('edit')){
+            Swal.fire({
+                title: 'Success!',
+                text: 'The place was edited correctly',
+                type: 'success',
+                confirmButtonText: 'Ok'
+            });
+        }
+    }
+
+    function validateValues(type){
+        var result = false;
+        var a = $('#'+type+'Name').val();
+        var b = $('#'+type+'Country').val();
+        var c = $('#'+type+'City').val();
+        var d = $('#'+type+'Coordinates').val();
+        var e = $('#'+type+'Image').val();
+        console.log('#'+type+'Name');
+        if(a === null || a === "" || 
+          b === null || b === "" || 
+          c === null || c === "" || 
+          d === null || d === "" ||
+          e === null || e === ""){
+            Swal.fire({
+                title: 'Error!',
+                text: "It's required to fill all the spaces",
+                type: 'warning',
+                confirmButtonText: 'Ok'
+            });
+        }else{
+            result = true;
+        }
+        return result;
+    }
+    
+    function deleteValue(idLocation){
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#e78b90',
+            cancelButtonColor: '#ddd',
+            confirmButtonText: 'Yes'
+        }).then((result) => {
+            if (result.value) {
+                Swal.fire(
+                'Deleted!',
+                'The location has been deleted.',
+                'success'
+                )
+            }
+        });
+    }
+</script>
+
 </h:body>
+
 </html>

@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
 
     <h:head>
         <meta charset="utf-8" />
@@ -143,13 +145,15 @@
                                                         <span>or</span>
                                                         <div class="line r"></div>
                                                     </div>
-                                                    <div class="form loginBox">
-                                                        <input id="emailRegister" class="form-control" type="text" placeholder="Email" name="emailRegister"/>
-                                                        <input id="passwordRegister" class="form-control" type="password" placeholder="Password" name="passwordRegister"/>
-                                                        <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation"/>
-                                                        <input class="btn btn-danger btn-fill" type="button" value="Register"/>
-                                                    </div>
-
+                                                    <h:form id="formRegister"  enctype="multipart/form-data">
+                                                        <div class="form loginBox">
+                                                            <h:inputText value=""  class="form-control"/>
+                                                            <input id="emailRegister" class="form-control" type="text" placeholder="Email" name="emailRegister"/>
+                                                            <input id="passwordRegister" class="form-control" type="password" placeholder="Password" name="passwordRegister"/>
+                                                            <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation"/>
+                                                            <input class="btn btn-danger btn-fill" type="button" value="Register"/>
+                                                        </div>
+                                                    </h:form>
                                                 </div>
                                             </div>
                                         </div>
@@ -168,7 +172,7 @@
                                                     <div class="form loginBox" style="display: block;">
                                                         <input id="email" class="form-control" type="text" placeholder="Email" name="email"/>
                                                         <input id="password" class="form-control" type="password" placeholder="Password" name="password"/>
-                                                        <h3 style="padding: 15px"><a href="#">Change my password</a></h3>
+                                                        <h3 style="padding: 15px"><a href="cambiarContrasenna.xhtml">Change my password</a></h3>
                                                         <input class="btn btn-danger btn-fill" type="button" value="Login"/>
                                                     </div>
 
@@ -268,6 +272,7 @@
 
     <!--   file where we handle all the script from the Gaia - Bootstrap Template   -->
     <script type="text/javascript" src="/ComponentesFinal/assets/js/gaia.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
     <script>
         function focusSignUp() {

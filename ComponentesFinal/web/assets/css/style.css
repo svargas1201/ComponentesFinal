@@ -275,3 +275,11 @@ div.item:hover i {
   padding: 0 15px;
   text-align: center;
 }
+
+.section{
+    min-height: 90vh !important;
+}
+
+.btnNav{
+    font-size: 12px !important;
+}
